@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Cipher Munch mark</title>
+  <desc id="desc">A playful cipher wheel with alphabet tiles and a smiling munch shape.</desc>
+  <rect width="512" height="512" rx="88" fill="#FFF9EE"/>
+  <circle cx="256" cy="256" r="188" fill="#F7D66D"/>
+  <circle cx="256" cy="256" r="153" fill="#1C9A8F"/>
+  <circle cx="256" cy="256" r="109" fill="#15263D"/>
+  <path d="M256 147C195.801 147 147 195.801 147 256C147 316.199 195.801 365 256 365C291.521 365 323.068 348.006 342.958 321.701L264 276L342.958 190.299C323.068 163.994 291.521 147 256 147Z" fill="#FFF9EE"/>
+  <circle cx="235" cy="222" r="14" fill="#15263D"/>
+  <path d="M219 294C239 312 273 312 295 292" stroke="#15263D" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#15263D" font-family="Courier New, monospace" font-size="32" font-weight="700">
+    <text x="247" y="54">A</text>
+    <text x="247" y="483">N</text>
+    <text x="456" y="266">Z</text>
+    <text x="34" y="266">M</text>
+    <text x="395" y="116">K</text>
+    <text x="101" y="116">Q</text>
+    <text x="397" y="421">S</text>
+    <text x="99" y="421">V</text>
+  </g>
+  <circle cx="256" cy="256" r="214" stroke="#15263D" stroke-width="14"/>
+  <circle cx="256" cy="256" r="188" stroke="#FFF9EE" stroke-width="10" stroke-dasharray="18 18"/>
+</svg>
