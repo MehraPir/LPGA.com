@@ -1,4 +1,4 @@
-/* Cipher Munch site — decode headline + scroll reveals */
+/* Cipher Munch site: decode headline + scroll reveals */
 (function () {
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
