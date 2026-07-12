@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter Frequency Analysis for Cryptograms — ETAOIN Explained | Cipher Munch</title>
+  <meta name="description" content="How letter frequency analysis cracks substitution ciphers: ETAOIN in English, EAOS in Spanish, and how Cipher Munch&#x27;s frequency tools train the skill into instinct." />
+  <link rel="canonical" href="https://www.learningplaygroundapps.com/guides/letter-frequency-analysis/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Letter Frequency Analysis for Cryptograms — ETAOIN Explained | Cipher Munch" />
+  <meta property="og:description" content="How letter frequency analysis cracks substitution ciphers: ETAOIN in English, EAOS in Spanish, and how Cipher Munch&#x27;s frequency tools train the skill into instinct." />
+  <meta property="og:url" content="https://www.learningplaygroundapps.com/guides/letter-frequency-analysis/" />
+  <meta property="og:image" content="https://www.learningplaygroundapps.com/assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..700&family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script defer src="/assets/js/site.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Letter Frequency Analysis: The Solver's Superpower", "description": "How letter frequency analysis cracks substitution ciphers: ETAOIN in English, EAOS in Spanish, and how Cipher Munch's frequency tools train the skill into instinct.", "image": "https://www.learningplaygroundapps.com/assets/img/og-image.jpg", "author": {"@type": "Organization", "name": "Learning Playground Apps"}, "publisher": {"@type": "Organization", "name": "Learning Playground Apps", "logo": {"@type": "ImageObject", "url": "https://www.learningplaygroundapps.com/assets/img/app-icon-512.png"}}, "mainEntityOfPage": "https://www.learningplaygroundapps.com/guides/letter-frequency-analysis/", "about": {"@type": "MobileApplication", "name": "Cipher Munch", "url": "https://apps.apple.com/us/app/cipher-munch/id6773527361"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Cipher Munch", "item": "https://www.learningplaygroundapps.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.learningplaygroundapps.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "Letter Frequency Analysis: The Solver's Superpower", "item": "https://www.learningplaygroundapps.com/guides/letter-frequency-analysis/"}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="/">
+        <img src="/assets/img/app-icon-256.png" alt="Cipher Munch app icon" width="34" height="34" />
+        <span>Cipher Munch</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#codebusters">For Codebusters</a></li>
+        <li><a href="/guides/" aria-current="page">Guides</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a class="nav-cta" href="https://apps.apple.com/us/app/cipher-munch/id6773527361">Download</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="article-hero">
+      <div class="wrap">
+        <p class="breadcrumb"><a href="/">Cipher Munch</a> / <a href="/guides/">Guides</a> / Technique</p>
+        <p class="eyebrow">Technique</p>
+        <h1>Letter Frequency Analysis: The Solver&#x27;s Superpower</h1>
+        <p class="dek">Every substitution cipher leaks the same secret: how often each letter appears. Learn to read the leak and no cryptogram is safe from you.</p>
+      </div>
+    </div>
+    <article class="article wrap">
+
+<p>Substitution ciphers hide <em>which</em> letter is which, but they can't hide <em>how often</em> each letter appears. English text is roughly 13% <em>E</em> and 9% <em>T</em>; those proportions survive encryption untouched. Frequency analysis — counting cipher letters and matching the counts to known language statistics — has been breaking these ciphers since the 9th century, and it's the first real technique every cryptogram solver learns.</p>
+
+<h2>ETAOIN SHRDLU, and what to do with it</h2>
+<p>The most common English letters, in order: <strong>E T A O I N S H R D L U</strong>. In a decent-length cryptogram, the most frequent cipher letter is very likely <em>E</em> or <em>T</em>. That single guess, tested against word shapes (does it make <em>THE</em> work? does a doubled pair become <em>EE</em> or <em>TT</em>?), starts the chain reaction that unravels the whole puzzle. Frequency gives you the hypothesis; the words confirm it.</p>
+<div class="callout"><span class="tag">In the app</span>
+<p>Cipher Munch can show the count <strong>under every cipher letter</strong> in the grid, or as a <strong>frequency table</strong> below the puzzle — your choice in Options → Display. No hand-tallying on scratch paper: the analysis layer is just <em>there</em>, so you can spend your attention on the deductions.</p></div>
+
+<h2>It changes by language — and the app knows</h2>
+<p>Spanish frequency order begins <strong>E A O S R N I</strong>: vowels are more common than in English, and <em>T</em> drops far down the list. If you carry English instincts into a Xenocrypt, your first guesses will be wrong in a consistent, fixable way. Practicing Spanish puzzles with frequencies visible recalibrates your instincts fast — and the built-in reference sheet keeps both languages' statistics one tap away.</p>
+
+<h2>Where frequency analysis shines (and where it doesn't)</h2>
+<p>It's strongest exactly where other techniques are weakest: <strong>Patristocrats</strong>, where no word boundaries exist and counting is most of what you have. It's least useful for <strong>Caesar</strong> ciphers — one confirmed letter reveals the entire shift, so counting is overkill. Cipher Munch reflects that honestly: the frequency table is hidden for Caesar puzzles, and you get a rotating decoder strip instead, because that's the tool that matches the cipher.</p>
+
+<h2>The endgame: turning it off</h2>
+<p>Competition solvers don't get an app-computed table — they count. But here's the twist: after a few hundred assisted solves, you barely need to. You'll recognize an <em>E</em>-shaped distribution at a glance, notice the suspiciously rare letters (hello, <em>Q</em> and <em>Z</em> candidates), and feel when a puzzle's statistics are lying to you (short quotes get weird). At that point, turn the frequency display off in Options and enjoy the strange new sensation of doing the analysis by instinct. The tool taught you; now the skill is yours.</p>
+
+<div class="article-cta">
+  <h2 style="font-family:var(--font-display);font-weight:620;font-size:1.6rem;margin-bottom:10px;">Put frequency analysis to work</h2>
+  <p style="margin-bottom:22px;">Frequency tools built into every puzzle — on while you learn, off when you don&#x27;t need them anymore.</p>
+  <div class="hero-ctas" style="justify-content:center;"><a class="badge-appstore" href="https://apps.apple.com/us/app/cipher-munch/id6773527361" aria-label="Download Cipher Munch on the App Store">
+<svg viewBox="0 0 180 54" role="img" aria-hidden="true" focusable="false"><rect x="0.75" y="0.75" width="178.5" height="52.5" rx="10" fill="#000" stroke="#a6a6a6" stroke-width="1.5"/><path fill="#fff" d="M36.4 27.6c0-3.4 2.8-5 2.9-5.1-1.6-2.3-4-2.6-4.9-2.7-2.1-.2-4.1 1.2-5.1 1.2-1 0-2.7-1.2-4.4-1.2-2.3 0-4.4 1.3-5.5 3.3-2.4 4.1-.6 10.1 1.7 13.4 1.1 1.6 2.4 3.4 4.2 3.4 1.7-.1 2.3-1.1 4.4-1.1 2 0 2.6 1.1 4.4 1.1 1.8 0 3-1.6 4.1-3.3 1.3-1.9 1.8-3.7 1.8-3.8-.1 0-3.5-1.4-3.6-5.2zM33 17.6c.9-1.1 1.5-2.7 1.4-4.3-1.3.1-3 .9-3.9 2-.9 1-1.6 2.6-1.4 4.1 1.5.1 3-.7 3.9-1.8z"/><text x="48" y="22" fill="#fff" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10.5" letter-spacing="0.4">Download on the</text><text x="48" y="41" fill="#fff" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" font-weight="600">App Store</text></svg></a><span class="android-note">Android — coming soon</span></div>
+</div>
+    </article>
+    <section class="related wrap">
+      <h2>Keep reading</h2>
+      <div class="guide-grid">
+        <a class="guide-card" href="/guides/aristocrat-practice/"><span class="tag">Ciphers</span><h3>Aristocrat Practice: From First Solve to K1 and K2 Keywords</h3><p>Aristocrats are the heart of every Codebusters test and every cryptogram book.</p><span class="more">Read the guide →</span></a><a class="guide-card" href="/guides/patristocrat-practice/"><span class="tag">Ciphers</span><h3>Patristocrat Practice Without Word Boundaries</h3><p>Take away the spaces and a friendly Aristocrat becomes a Patristocrat — the puzzle that separates casual solvers from competitors.</p><span class="more">Read the guide →</span></a><a class="guide-card" href="/guides/xenocrypt-practice/"><span class="tag">Ciphers</span><h3>Xenocrypt Practice: Spanish Cryptograms with the Ñ</h3><p>Every Codebusters test has at least one Spanish cryptogram, and most teams under-prepare for it.</p><span class="more">Read the guide →</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Learning Playground Apps</h4>
+          <p>An independent studio making playful, brainy iOS apps. Cipher Munch is our love letter to classical ciphers — and to the coaches and students who race to crack them.</p>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/guides/codebusters-practice-app/">Codebusters practice</a></li>
+            <li><a href="/guides/codebusters-team-practice/">For coaches</a></li>
+            <li><a href="/guides/cryptograms-for-beginners/">For beginners</a></li>
+            <li><a href="/guides/printable-cryptogram-puzzles/">Printable puzzles</a></li>
+            <li><a href="/guides/">All guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>App</h4>
+          <ul>
+            <li><a href="https://apps.apple.com/us/app/cipher-munch/id6773527361">Download on the App Store</a></li>
+            <li><a href="/privacy-policy.html">Privacy policy</a></li>
+            <li><a href="/terms-of-use.html">Terms of use</a></li>
+            <li><a href="mailto:LearningPlayGroundApps@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© 2026 Learning Playground Apps. All rights reserved.</span>
+        <span>Made for code crackers everywhere. Android coming soon.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
