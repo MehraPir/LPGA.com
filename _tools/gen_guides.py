@@ -3,7 +3,7 @@
 import html, json, os
 
 OUT = "/Users/mehra/Developer/Websites/LPGA New"
-DOMAIN = "https://www.learningplaygroundapps.com"
+DOMAIN = "https://learningplaygroundapps.com"
 APP = "https://apps.apple.com/us/app/cipher-munch/id6773527361"
 
 BADGE = '''<a class="badge-appstore" href="{app}" aria-label="Download Cipher Munch on the App Store">
