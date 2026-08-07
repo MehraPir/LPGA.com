@@ -2,7 +2,7 @@
 """One-shot generator for Cipher Munch guide pages (output committed as static HTML)."""
 import html, json, os
 
-OUT = "/Users/mehra/Developer/Websites/LPGA New"
+OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://learningplaygroundapps.com"
 APP = "https://apps.apple.com/us/app/cipher-munch/id6773527361"
 
