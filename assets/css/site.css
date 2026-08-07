@@ -103,7 +103,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .hero .lead { font-size: 1.22rem; color: var(--muted); max-width: 34em; }
 .hero .lead strong { color: var(--paper); font-weight: 600; }
 .hero-ctas { display: flex; align-items: center; gap: 18px; margin: 30px 0 14px; flex-wrap: wrap; }
-.android-note {
+.store-note {
   font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted);
   border: 1px dashed var(--line); border-radius: 999px; padding: 7px 14px;
 }
@@ -113,9 +113,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .trust-row li::before { content: "✓ "; color: var(--green); font-weight: 700; }
 
-.badge-appstore { display: inline-block; line-height: 0; }
-.badge-appstore svg { height: 54px; width: auto; }
-.badge-appstore:hover { filter: brightness(1.12); }
+.badge-appstore, .badge-store { display: inline-block; line-height: 0; }
+.badge-appstore svg, .badge-store svg { height: 54px; width: auto; }
+.badge-appstore:hover, .badge-store:hover { filter: brightness(1.12); }
 
 .hero-art { position: relative; display: flex; justify-content: center; }
 .hero-art .coin { position: absolute; width: 108px; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5)); }
