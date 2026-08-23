@@ -98,7 +98,7 @@ FOOTER = '''
 CTA = '''<div class="article-cta">
   <h2 style="font-family:var(--font-display);font-weight:620;font-size:1.6rem;margin-bottom:10px;">{cta_head}</h2>
   <p style="margin-bottom:22px;">{cta_sub}</p>
-  <div class="hero-ctas" style="justify-content:center;">''' + BADGE + AMAZON_BADGE + PLAY_BADGE + '''</div>
+  <div class="hero-ctas" style="justify-content:center;">''' + BADGE + PLAY_BADGE + AMAZON_BADGE + '''</div>
 </div>'''
 
 GUIDES = {}  # slug -> dict; populated below, order preserved (py3.7+)
