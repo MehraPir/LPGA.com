@@ -49,7 +49,7 @@ HEAD = '''<!DOCTYPE html>
         <li><a href="/#codebusters">For Codebusters</a></li>
         <li><a href="/guides/"{guides_current}>Guides</a></li>
         <li><a href="/#faq">FAQ</a></li>
-        <li><a class="nav-cta" href="''' + APP + '''">Download</a></li>
+        <li><a class="nav-cta" href="/#download">Download</a></li>
       </ul>
     </nav>
   </header>
