@@ -4,6 +4,13 @@ import html, json, os
 
 OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://learningplaygroundapps.com"
+# Temporary cross-domain canonical. This site and ciphermunch.com currently
+# serve near-identical pages, so every shared page points its canonical at the
+# ciphermunch.com twin to stop the two competing in search. Only rel=canonical
+# crosses domains: og:url and the JSON-LD keep DOMAIN, because the page really
+# is served from here. Drop CANONICAL_DOMAIN (set it to DOMAIN) once this site
+# becomes the studio/portfolio page and the duplication is gone.
+CANONICAL_DOMAIN = "https://ciphermunch.com"
 APP = "https://apps.apple.com/us/app/cipher-munch/id6773527361"
 AMAZON = "https://www.amazon.com/dp/B0HC616CPG"
 PLAY = "https://play.google.com/store/apps/details?id=com.learningplaygroundapps.ciphermunch"
@@ -21,7 +28,7 @@ HEAD = '''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content="{desc}" />
-  <link rel="canonical" href="{canonical}" />
+  <link rel="canonical" href="{canonical_href}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{desc}" />
@@ -485,7 +492,8 @@ def card(slug):
 for slug, g in GUIDES.items():
     canonical = f"{DOMAIN}/guides/{slug}/"
     page = HEAD.format(title=html.escape(g["page_title"]), desc=html.escape(g["desc"]),
-                       canonical=canonical, domain=DOMAIN, jsonld=jsonld_article(g, canonical),
+                       canonical=canonical, canonical_href=f"{CANONICAL_DOMAIN}/guides/{slug}/",
+                       domain=DOMAIN, jsonld=jsonld_article(g, canonical),
                        guides_current=' aria-current="page"')
     page += f'''
   <main>
@@ -530,7 +538,8 @@ hub_jsonld = '<script type="application/ld+json">' + json.dumps({
 hub = HEAD.format(
     title="Guides: Cryptogram Solving & Codebusters Practice | Cipher Munch",
     desc="Practical guides to getting more from Cipher Munch: Codebusters practice for students and coaches, Aristocrats, Patristocrats, Xenocrypts, printing puzzles, and solving faster.",
-    canonical=DOMAIN + "/guides/", domain=DOMAIN, jsonld=hub_jsonld, guides_current=' aria-current="page"')
+    canonical=DOMAIN + "/guides/", canonical_href=CANONICAL_DOMAIN + "/guides/",
+    domain=DOMAIN, jsonld=hub_jsonld, guides_current=' aria-current="page"')
 hub += f'''
   <main>
     <div class="article-hero">
