@@ -175,14 +175,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .step p { color: var(--muted); font-size: 0.98rem; }
 
 /* ---------- screenshots ---------- */
+/* The store screenshots are slices of one panorama with 60px gutters per
+   1242px panel; keeping that ratio lets phones and coins line up across slices. */
 .shots {
-  display: flex; gap: 26px; overflow-x: auto; padding: 8px 24px 26px;
+  --shot-w: min(268px, 70vw);
+  display: flex; gap: calc(var(--shot-w) * 60 / 1242); overflow-x: auto; padding: 8px 24px 26px;
   scroll-snap-type: x mandatory; max-width: var(--w); margin: 0 auto;
   scrollbar-color: var(--gold-deep) transparent;
 }
-.shot { scroll-snap-align: center; flex: 0 0 auto; text-align: center; }
-.shot .phone { width: min(268px, 70vw); border-radius: 38px; padding: 8px; }
-.shot .phone img { border-radius: 30px; }
+.shot { scroll-snap-align: center; flex: 0 0 auto; text-align: center; width: var(--shot-w); }
+.shot .phone {
+  width: 100%; padding: 0; border: 0; background: none; border-radius: 18px;
+  overflow: hidden; box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+}
+.shot .phone img { border-radius: 0; }
 .shot figcaption { margin-top: 14px; font-size: 0.95rem; color: var(--muted); }
 .shot figcaption b { color: var(--paper); display: block; font-size: 1.02rem; }
 
