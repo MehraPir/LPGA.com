@@ -309,7 +309,7 @@ G("cryptograms-for-beginners",
   cta_sub="Free Starter packs, 10 free hints a day, and helpers that make the first puzzle a joy instead of a wall.",
   related=["letter-frequency-analysis", "improve-cryptogram-solving-speed", "printable-cryptogram-puzzles"],
   body="""
-<p>The mistake most beginners make is starting with a hard puzzle, staring at it, and deciding cryptograms aren't for them. The fix is sequencing: start where the code is visible, and add difficulty only as each level starts to feel easy. Cipher Munch's fifteen cipher types happen to form a perfect beginner's staircase.</p>
+<p>The mistake most beginners make is starting with a hard puzzle, staring at it, and deciding cryptograms aren't for them. The fix is sequencing: start where the code is visible, and add difficulty only as each level starts to feel easy. Cipher Munch's nineteen cipher types happen to form a perfect beginner's staircase.</p>
 
 <h2>Days 1–2: visual ciphers, table on</h2>
 <p>Start with <strong>Pigpen</strong> or the <strong>Dancing Men</strong> (the stick-figure cipher from Sherlock Holmes). Each symbol maps to one letter, and the app shows you the whole key:</p>
@@ -397,7 +397,7 @@ G("cryptogram-app-no-ads-offline",
 <p>Progress and stats sync through <strong>your own private iCloud</strong>: automatically, with no login, invisible even to the developer. Get a new iPhone, open the app, and your streak, stats, and solved puzzles are already there. Turn it off anytime in iOS Settings if you'd rather stay fully local.</p></div>
 
 <h2>What "free" actually means here</h2>
-<p>Every one of the fifteen cipher types includes a <strong>free Starter pack</strong>: enough for genuine daily practice, not a five-puzzle teaser. You also get <strong>10 free hints a day</strong>. When you want more volume, the upgrades are honest: buy one volume outright (a one-time purchase, yours forever), subscribe to a single cipher type, or get All Access. No energy meters, no timers, no "watch an ad to continue." You will never be interrupted mid-solve, because there is nothing in the app whose job is to interrupt you.</p>
+<p>Every one of the nineteen cipher types includes a <strong>free Starter pack</strong>: enough for genuine daily practice, not a five-puzzle teaser. You also get <strong>10 free hints a day</strong>. When you want more volume, the upgrades are honest: buy one volume outright (a one-time purchase, yours forever), subscribe to a single cipher type, or get All Access. No energy meters, no timers, no "watch an ad to continue." You will never be interrupted mid-solve, because there is nothing in the app whose job is to interrupt you.</p>
 """)
 
 # ---------------------------------------------------------------- guide 9
